@@ -6,23 +6,35 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:43:51 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/09 17:07:45 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:31:07 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie(void)
+Zombie::Zombie()
 {
 	return ;
 }
 
-Zombie::~Zombie(void)
+Zombie::~Zombie()
 {
+	std::cout << "\x1b[31;1m" << this->_name << " Destructor called" << std::endl;
 	return ;
 }
 
-void annouce(void)
+void Zombie::announce(void)
 {
+	std::cout << this->getZombieName() << " BraiiiiiiinnnzzzZ.." << std::endl;
+}
 
+void	Zombie::setZombieName(std::string zombieName)
+{
+	this->_name = zombieName;
+}
+
+std::string Zombie::getZombieName(void)
+{
+	return (this->_name);
 }
