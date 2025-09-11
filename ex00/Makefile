@@ -1,4 +1,4 @@
-NAME	= Brainz
+NAME	= brainz
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 

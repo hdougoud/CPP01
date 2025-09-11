@@ -1,4 +1,4 @@
-NAME	= Horde
+NAME	= horde
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 
