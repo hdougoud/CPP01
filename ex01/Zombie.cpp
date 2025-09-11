@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:05:03 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/10 18:31:21 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/11 13:35:16 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
-	std::cout << "\x1b[31;1m" << this->_name << " Destructor called" << std::endl;
+	std::cout << "\x1b[31;1m" << this->_name << " Destructor called" << "\x1b[0m" << std::endl;
 	return ;
 }
 
