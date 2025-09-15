@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:44:12 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/15 17:01:53 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 18:51:49 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ std::string	HumanA::getName(void) const
 	return (this->_name);
 }
 
-void	HumanA::attack(void)
+void	HumanA::attack(void) const
 {
-	std::cout << this->getName() << _weapon.getType() << std::endl;
+	std::cout << this->getName() << " attacks with their " << _weapon.getType() << std::endl;
 }

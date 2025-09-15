@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:05:10 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/11 13:36:30 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 18:13:22 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Zombie*	zombieHorde(int N, std::string name)
 	for (int i = 0; i < N; i++)
 	{
 		zombieName << name << ' ' << i + 1;
-		horde++->setZombieName(zombieName.str());
+		horde++->setName(zombieName.str());
 		zombieName.str("");
 	}
 	return (firstZombie);
