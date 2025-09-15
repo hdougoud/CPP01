@@ -1,4 +1,4 @@
-NAME	= Name
+NAME	= Ref_and_PTR
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 

@@ -6,15 +6,15 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 14:47:03 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/12 14:33:03 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:12:17 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Weapon.hpp"
 
-Weapon::Weapon()
+Weapon::Weapon(std::string weaponType)
 {
+	_type = weaponType;
 	return ;
 }
 
@@ -23,7 +23,7 @@ Weapon::~Weapon()
 	return ;
 }
 
-std::string	Weapon::getType(void)
+std::string	Weapon::getType(void) const
 {
 	return (this->_type);
 }

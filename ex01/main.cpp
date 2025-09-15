@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:04:17 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/11 13:58:32 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:24:52 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie*	zombieHorde(int N, std::string name);
 int	main(void)
 {
 	int		hordeZise;
-	Zombie *zombie;
+	Zombie	*zombie;
 	
 	hordeZise = 5;
 	zombie = zombieHorde(hordeZise, "Fred");

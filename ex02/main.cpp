@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 13:52:52 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/11 14:34:36 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 15:56:19 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 	str = "HI THIS IS BRAIN";
 
 	std::cout << &str << '\n';
-	std::cout << &stringPTR << '\n';
+	std::cout << stringPTR << '\n';
 	std::cout << &stringREF << '\n';
 
 	std::cout << str << '\n';

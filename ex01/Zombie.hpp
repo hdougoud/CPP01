@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:05:05 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/10 18:20:31 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/15 17:23:55 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ class Zombie
 		Zombie();
 		~Zombie();
 		void announce(void);
-		std::string getZombieName(void);
-		void setZombieName(std::string);
+		std::string getName(void) const;
+		void setName(std::string);
 	private:
 		std::string _name;
 };
