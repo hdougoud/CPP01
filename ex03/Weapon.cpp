@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 14:47:03 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/15 19:03:24 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/16 10:24:10 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ std::string	Weapon::getType(void) const
 
 void	Weapon::setType(std::string weaponType)
 {
-	_type = weaponType;
+	this->_type = weaponType;
 }

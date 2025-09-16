@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:44:00 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/10 18:35:46 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/16 16:00:09 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ Zombie*	newZombie(std::string name)
 {
 	Zombie	*zombie;
 	
-	zombie = new Zombie();
-	zombie->setZombieName(name);
+	zombie = new (std::nothrow) Zombie();
+	if (!zombie)
+		return (NULL);
+	zombie->setName(name);
 	return (zombie);
 }

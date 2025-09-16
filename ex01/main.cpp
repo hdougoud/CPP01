@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 17:04:17 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/15 17:24:52 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:39:52 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ Zombie*	zombieHorde(int N, std::string name);
 
 int	main(void)
 {
-	int		hordeZise;
+	int		hordeSize;
 	Zombie	*zombie;
 	
-	hordeZise = 5;
-	zombie = zombieHorde(hordeZise, "Fred");
+	hordeSize = 5;
+	zombie = zombieHorde(hordeSize, "Fred");
 	if (!zombie)
 		return(1);
-	for (int i = 0; i < hordeZise; i++)
+	for (int i = 0; i < hordeSize; i++)
 	{
 		zombie->announce();
 		zombie++;
 	}
-	delete [] (zombie - 5);
+	delete [] (zombie - hordeSize);
 	return (0);
 };
