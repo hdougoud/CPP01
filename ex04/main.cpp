@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:08:36 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/16 17:54:33 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/17 21:19:53 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 static void	check_args(int argc);
 
-int	main(int argc, const char **argv)
+int	main(int argc, char **argv)
 {
 	std::ifstream	oldFile;
-	std::ifstream	newFile;
+	std::ofstream	newFile;
 
 	check_args(argc);
-	open_file(&argv[1], oldFile);
-	create_newFile(argv[1]);
+	open_file(argv[1], oldFile);
+	create_newFile(argv[1], newFile);
+	replace(argv, oldFile, newFile);
+	return (0);
 }
 
 
@@ -34,6 +36,6 @@ static void	check_args(int argc)
 		else
 			std::cout << "Not enough argument : ";
 		std::cout << "Use \"./sed filename s1 s2\"" << std::endl;
-		exit(EXIT_FAILURE);
+		std::_Exit(EXIT_FAILURE);
 	}
 }

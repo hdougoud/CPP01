@@ -2,7 +2,7 @@ NAME	= sed
 CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
-SRCS	= main.cpp file_manipulation.cpp
+SRCS	= main.cpp open_files.cpp replace.cpp
 OBJECT	= $(SRCS:.cpp=.o)
 
 all: $(NAME)
