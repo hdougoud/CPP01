@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 17:56:46 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/18 11:05:12 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/18 13:22:26 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	replace(char **argv, std::ifstream &oldFile, std::ofstream &newFile)
 
 	s1 = argv[2];
 	s2 = argv[3];
-	for (int i = 0; getline(oldFile, buffer); i++)
+	while (getline(oldFile, buffer))
 	{
 		search_and_replace(s1, s2, buffer);
 		newFile << buffer << std::endl;
