@@ -6,8 +6,16 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:15:36 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/18 14:16:24 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/19 15:21:55 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+int	main(void)
+{
+	Harl harl;
+
+	harl.complain("Warning");
+	return (0);
+}

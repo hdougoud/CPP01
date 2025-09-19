@@ -6,9 +6,20 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 18:52:29 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/18 19:02:13 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/19 17:15:56 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP
+#define HARL_HPP
+
+#include <iostream>
+
+#define COLOR_RED		"\x1b[31;1m"
+#define COLOR_YELLOW	"\x1b[33;1m"
+#define COLOR_BLUE		"\x1b[34;1m"
+#define COLOR_WHITE		"\x1b[97;1m"
+#define COLOR_RESET		"\x1b[0m"
 
 #include <iostream>
 
@@ -17,10 +28,12 @@ class Harl
 	public:
 		Harl();
 		~Harl();
-		//function
+		void	complain(std::string level) const;
 	private:
-		void	debug(void);
-		void	info(void);
-		void	warning(void);
-		void	error(void);
-}
+		void	_debug(void) const;
+		void	_info(void) const;
+		void	_warning(void) const;
+		void	_error(void) const;
+};
+
+#endif
