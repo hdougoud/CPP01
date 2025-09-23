@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:15:42 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/19 18:05:55 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/19 19:38:42 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 Harl::Harl()
 {
-	void (Harl::*debug)(void) = &Harl::_debug;
-	void (Harl::*info)(void) = &Harl::_info;
-	void (Harl::*warning)(void) = &Harl::_warning;
-	void (Harl::*error)(void) = &Harl::_error;
-
-	_ptrArray[0] = &debug;
-	_ptrArray[1] = &info;
-	_ptrArray[2] = &warning;
-	_ptrArray[3] = &error;
+	_arrayPtr[0] = &Harl::_debug;
+	_arrayPtr[1] = &Harl::_info;
+	_arrayPtr[2] = &Harl::_warning;
+	_arrayPtr[3] = &Harl::_error;
 	return ;
 }
 
@@ -33,7 +28,16 @@ Harl::~Harl()
 
 void	Harl::complain(std::string level)
 {
-	(void) level;
+	std::string	_arrayStr[] = {"debug", "info", "warning", "error"};
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level.compare(_arrayStr[i]))
+		{
+			(this->*_arrayPtr[i])();
+			break;
+		}
+	}
 }
 
 void	Harl::_debug(void)

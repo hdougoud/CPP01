@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:15:44 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/19 17:16:58 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/19 19:38:28 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ class Harl
 		~Harl();
 		void complain(std::string level);
 	private:
-		void	*_ptrArray[4];
-		void	_debug(void);
-		void	_info(void);
-		void	_warning(void);
-		void	_error(void);
+		void		_debug(void);
+		void		_info(void);
+		void		_warning(void);
+		void		_error(void);
+		void		(Harl::*_arrayPtr[4])();
 };
 
 #endif
