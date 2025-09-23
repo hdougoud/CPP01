@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 18:52:11 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/19 17:07:37 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/23 11:01:16 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,17 @@ Harl::~Harl()
 
 void	Harl::complain(std::string level) const
 {
-	(void) level;
+	int			i = 0;
+	std::string	_arrayStr[] = {"debug", "info", "warning", "error"};
 
-	switch(0)
+
+	while (i < 4)
+	{
+		if (!level.compare(_arrayStr[i]))
+			break;
+		i++;
+	}
+	switch(i)
 	{
 		case 0:
 			this->_debug();
@@ -77,6 +85,6 @@ void	Harl::_error(void) const
 	std::cout
 	<< COLOR_RED
 	<< "[ ERROR ]\n"
-	<< "Red message\n"
+	<< "Error message\n"
 	<< COLOR_RESET << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:15:44 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/19 19:38:28 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/23 10:11:33 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Harl
 		void		_info(void);
 		void		_warning(void);
 		void		_error(void);
-		void		(Harl::*_arrayPtr[4])();
+		void		(Harl::*_arrayPtr[4])(void);
 };
 
 #endif
