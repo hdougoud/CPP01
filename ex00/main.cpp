@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:43:56 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/16 16:00:37 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/23 11:08:32 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ int main(void)
 {
 	Zombie	*zombie;
 	
-	zombie = newZombie("zombie1");
+	zombie = newZombie("Fred");
 	if (!zombie)
 		return (1);
-	randomChump("Zombie2");
+	zombie->announce();
 	delete zombie;
+	randomChump("Albert");
 	return (0);
 }

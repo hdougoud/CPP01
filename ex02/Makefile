@@ -1,6 +1,6 @@
 NAME	= Ref_and_PTR
 CC		= g++
-FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRCS	= main.cpp
 OBJECT	= $(SRCS:.cpp=.o)

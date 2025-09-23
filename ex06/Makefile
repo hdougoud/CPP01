@@ -21,4 +21,11 @@ fclean: clean
 
 re: fclean all
 
+test: all
+	./harlFilter DEBUG
+	./harlFilter INFO
+	./harlFilter WARNING
+	./harlFilter ERROR
+	./harlFilter OTHER
+
 .PHONY: all clean fclean re

@@ -15,6 +15,7 @@ $(NAME) : $(OBJECT)
 
 clean:
 	rm -rf *.o
+	rm -f test.txt test.txt.replace
 
 fclean: clean
 	rm -f $(NAME)
@@ -24,7 +25,7 @@ re: fclean all
 test: all
 	rm -f test.txt
 	rm -f test.txt.replace
-	echo -e "Hello World\ntest 123\n123\nabc123\n\
+	echo "Hello World\ntest 123\n123\nabc123\n\
 	\n\n123123123\n123 123 123\nREPLACED 123\n\
 	aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa123\n\
 	123aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa123aaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\

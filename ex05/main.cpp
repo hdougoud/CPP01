@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 14:15:36 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/09/23 10:17:49 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/09/23 11:25:15 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ int	main(void)
 {
 	Harl harl;
 
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("debug");
-	harl.complain("info");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("OTHER");
 	return (0);
 }
